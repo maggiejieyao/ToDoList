@@ -51,6 +51,10 @@ ul{
     list-style-type: none;
 }
 
+#in:focus, button:focus{
+    outline: none;
+}
+
 /*checkbox css*/
 #radio{
     -webkit-appearance: none;

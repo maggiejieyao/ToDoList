@@ -1,8 +1,7 @@
 //add li to ul list
 var outC = document.getElementById("container");
 var listUl = document.createElement("ul");
-document.getElementById("addBtn").addEventListener("click", function(){
-        
+document.getElementById("addBtn").addEventListener("click", function(e){
         //check if ther's a input
         var inputText = document.getElementById("in").value;
         var msg = document.getElementById("alertMess"); if(document.getElementById("in").value.length != 0){
@@ -27,10 +26,12 @@ document.getElementById("addBtn").addEventListener("click", function(){
                 listUl.removeChild(listLi);
             })
             listLi.appendChild(removeBtn);
+            document.getElementById("in").value = "";
         //add alert message validation
         }else{
             msg.innerHTML = "Nothing there my friend."; 
         }
+    e.preventDefault();
 
 })
 outC.appendChild(listUl);
